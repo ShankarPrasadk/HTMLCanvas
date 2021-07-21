@@ -14,12 +14,10 @@ public class Rectangle {
 	driver.manage().window().maximize();
 	driver.get("http://htmlcanvasstudio.com/");
 	WebElement rect = driver.findElement(By.xpath("//div[@class='toolbar']/input[contains(@class,'rectangle')]"));
-	int z1=0;
-	int z2=327;
-	
+	int z1=0, z2=327, z3=354, z4=106;	
 	Actions action = new Actions(driver);
 	rect.click();
-	Action rectangle =action.moveToElement(rect,z1,z2).clickAndHold().moveByOffset(354, 106).release().click().build();
+	Action rectangle =action.moveToElement(rect,z1,z2).clickAndHold().moveByOffset(z3, z4).release().click().build();
 	rectangle.perform();
 	}
 
